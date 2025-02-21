@@ -3,246 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Somanath Nayak - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* Internal CSS */
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
+        * {
             margin: 0;
             padding: 0;
-            color: #333;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
-
-        header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 2rem;
-            text-align: center;
+        body {
+            background-color: #0d1117;
+            color: #eaeaea;
         }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 1rem;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-
-        main {
+        .container {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: auto;
             padding: 2rem;
         }
-
-        section {
-            margin-bottom: 3rem;
-            padding: 2rem;
-            border-radius: 8px;
-            background-color: #f8f9fa;
-        }
-
-        .skills ul {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-            list-style: none;
-            padding: 0;
-        }
-
-        .skills li {
-            background-color: #e9ecef;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            text-align: center;
-        }
-
-        .project-card {
-            background-color: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            margin-bottom: 2rem;
-            transition: transform 0.2s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-card a {
-            display: inline-block;
-            margin-top: 1rem;
-            padding: 0.5rem 1rem;
-            background-color: #2c3e50;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-        }
-
-        .project-card a:hover {
-            background-color: #34495e;
-        }
-
-        .contact-info li {
-            margin-bottom: 1rem;
-        }
-
-        .contact-info a {
-            color: #2c3e50;
-            text-decoration: none;
-        }
-
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .education-item {
-            background-color: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .tech-stack {
+        header {
             display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: #161b22;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
-
-        .tech-tag {
-            background-color: #e9ecef;
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
-            font-size: 0.875rem;
-            color: #2c3e50;
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+        header nav ul li a {
+            text-decoration: none;
+            color: #eaeaea;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        header nav ul li a:hover {
+            color: #58a6ff;
+        }
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: #58a6ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #1f6feb;
+        }
+        .section {
+            padding: 4rem 0;
+        }
+        .section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+        .card {
+            background: #161b22;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #161b22;
+            margin-top: 2rem;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Mohammed Abdur Rasheed</h1>
+        <h2>Somanath</h2>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hello! I'm Mohammed Abdur Rasheed, a passionate web developer with experience in creating responsive and user-friendly websites. I enjoy solving complex problems and learning new technologies.</p>
-        </section>
+    <section class="hero">
+        <h1>Hi, I'm Somanath Nayak</h1>
+        <p>A passionate Full-Stack Developer focused on building modern web applications.</p>
+        <a href="#projects" class="btn">View My Work</a>
+    </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript</li>
-                <li>Java</li>
-                <li>React</li>
-                <li>Node.js</li>
-                <li>Express.js</li>
-                <li>MySQL</li>
-                <li>MongoDB</li>
-                <li>Git</li>
-                <li>GitHub</li>
-                <li>npm</li>
-                <li>SQL</li>
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <div class="grid">
+            <div class="card">HTML & CSS</div>
+            <div class="card">JavaScript</div>
+            <div class="card">React.js</div>
+            <div class="card">Node.js</div>
+            <div class="card">MongoDB</div>
+            <div class="card">Express.js</div>
+            <div class="card">Java</div>
+            <div class="card">Python</div>
+        </div>
+    </section>
 
-            </ul>
-        </section>
-
-        <section id="projects">
-            <h2>Projects & Work Experience</h2>
-            <article class="project-card">
-                <h3>Weather App</h3>
-                <p>A dynamic weather application built with React and OpenWeather API, featuring real-time weather updates, location-based forecasts, and responsive design for all devices.</p>
-                <div class="tech-stack">
-                    <span class="tech-tag">React</span>
-                    <span class="tech-tag">API</span>
-                    <span class="tech-tag">CSS3</span>
-                </div>
-                <a href="https://github.com/iamabdurrasheed/weather-app">View Project</a>
-            </article>
-
-            <article class="project-card">
-                <h3>Task Management System</h3>
-                <p>Full-stack task management application using MERN stack. Features include user authentication, task CRUD operations, and priority management.</p>
-                <div class="tech-stack">
-                    <span class="tech-tag">MongoDB</span>
-                    <span class="tech-tag">Express</span>
-                    <span class="tech-tag">React</span>
-                    <span class="tech-tag">Node.js</span>
-                </div>
-                <a href="https://github.com/iamabdurrasheed/task-manager">View Project</a>
-            </article>
-
-            <article class="project-card">
-                <h3>Portfolio Website</h3>
-                <p>Personal portfolio website built with HTML, CSS, and JavaScript. Features responsive design and modern UI/UX principles.</p>
-                <div class="tech-stack">
-                    <span class="tech-tag">HTML5</span>
-                    <span class="tech-tag">CSS3</span>
-                    <span class="tech-tag">JavaScript</span>
-                </div>
-                <a href="https://github.com/iamabdurrasheed/portfolio">View Project</a>
-            </article>
-        </section>
-
-        <section id="achievements">
-            <h2>Achievements & Feedback</h2>
-            <ul>
-                <li>Achievement 1</li>
-                <li>Achievement 2</li>
-                <li>Positive client feedback</li>
-            </ul>
-        </section>
-
-        <section id="education">
-            <h2>Education</h2>
-            <div class="education-item">
-                <h3>KMIT</h3>
-                <p>Btech CSE</p>
-                <p>2022-2026</p>
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>CySentry</h3>
+                <p>A Machine Learning Model which detects system compromise.</p>
+                <a href="#" class="btn">View</a>
             </div>
-        </section>
+            <div class="card">
+                <h3>Task Manager</h3>
+                <p>A task management system using the MERN stack.</p>
+                <a href="#" class="btn">View</a>
+            </div>
+        </div>
+    </section>
 
-        <section id="contact">
-            <h2>Contact Information</h2>
-            <ul class="contact-info">
-                <li>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></li>
-                <li>Phone: <a href="tel:+1234567890">123-456-7890</a></li>
-                <li>LinkedIn: <a href="https://linkedin.com/in/iamabdurrasheed">linkedin.com/in/iamabdurrasheed</a></li>
-                <li>GitHub: <a href="https://github.com/iamabdurrasheed">github.com/iamabdurrasheed</a></li>
-            
-            </ul>
-        </section>
-    </main>
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:somanathnayak1304@gmail.com">somanathnayak1304@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/somanath-nayak-354488247/">linkedin.com/in/somanath-nayak</a></p>
+        <p>GitHub: <a href="https://github.com/Somanath-codes">github.com/Somanath-codes</a></p>
+    </section>
 
     <footer>
-        <p>&copy; 2025 Mohammed Abdur Rasheed. All rights reserved.</p>
+        <p>&copy; 2025 Somanath Nayak. All rights reserved.</p>
     </footer>
 </body>
 </html>
