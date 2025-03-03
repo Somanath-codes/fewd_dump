@@ -4,159 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Somanath Nayak - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
         body {
             background-color: #0d1117;
             color: #eaeaea;
         }
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 2rem;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
+        .navbar {
             background: #161b22;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        header nav ul {
-            list-style: none;
-            display: flex;
-            gap: 1.5rem;
-        }
-        header nav ul li a {
-            text-decoration: none;
-            color: #eaeaea;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        header nav ul li a:hover {
-            color: #58a6ff;
         }
         .hero {
+            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
             text-align: center;
         }
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 600;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            margin: 1rem 0;
-        }
-        .btn {
-            display: inline-block;
-            padding: 0.8rem 1.5rem;
+        .btn-custom {
             background: #58a6ff;
             color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 1rem;
-            transition: 0.3s;
         }
-        .btn:hover {
+        .btn-custom:hover {
             background: #1f6feb;
-        }
-        .section {
-            padding: 4rem 0;
-        }
-        .section h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 2rem;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 2rem;
         }
         .card {
             background: #161b22;
-            padding: 1.5rem;
-            border-radius: 8px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        .card:hover {
-            transform: translateY(-10px);
+            color: white;
         }
         footer {
-            text-align: center;
-            padding: 2rem;
             background: #161b22;
+            padding: 1rem 0;
+            text-align: center;
             margin-top: 2rem;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h2>Somanath</h2>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Somanath</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <section class="hero">
         <h1>Hi, I'm Somanath Nayak</h1>
         <p>A passionate Full-Stack Developer focused on building modern web applications.</p>
-        <a href="#projects" class="btn">View My Work</a>
+        <a href="#projects" class="btn btn-custom">View My Work</a>
     </section>
 
-    <section id="skills" class="section">
-        <h2>Skills</h2>
-        <div class="grid">
-            <div class="card">HTML & CSS</div>
-            <div class="card">JavaScript</div>
-            <div class="card">React.js</div>
-            <div class="card">Node.js</div>
-            <div class="card">MongoDB</div>
-            <div class="card">Express.js</div>
-            <div class="card">Java</div>
-            <div class="card">Python</div>
+    <section id="skills" class="container py-5">
+        <h2 class="text-center">Skills</h2>
+        <div class="row text-center">
+            <div class="col-md-3 py-2">HTML & CSS</div>
+            <div class="col-md-3 py-2">JavaScript</div>
+            <div class="col-md-3 py-2">React.js</div>
+            <div class="col-md-3 py-2">Node.js</div>
+            <div class="col-md-3 py-2">MongoDB</div>
+            <div class="col-md-3 py-2">Express.js</div>
+            <div class="col-md-3 py-2">Java</div>
+            <div class="col-md-3 py-2">Python</div>
         </div>
     </section>
 
-    <section id="projects" class="section">
-        <h2>Projects</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>CySentry</h3>
-                <p>A Machine Learning Model which detects system compromise.</p>
-                <a href="#" class="btn">View</a>
+    <section id="projects" class="container py-5">
+        <h2 class="text-center">Projects</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <h3>CySentry</h3>
+                    <p>A Machine Learning Model which detects system compromise.</p>
+                    <a href="#" class="btn btn-custom">View</a>
+                </div>
             </div>
-            <div class="card">
-                <h3>Task Manager</h3>
-                <p>A task management system using the MERN stack.</p>
-                <a href="#" class="btn">View</a>
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <h3>Task Manager</h3>
+                    <p>A task management system using the MERN stack.</p>
+                    <a href="#" class="btn btn-custom">View</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="container py-5 text-center">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:somanathnayak1304@gmail.com">somanathnayak1304@gmail.com</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/somanath-nayak-354488247/">linkedin.com/in/somanath-nayak</a></p>
@@ -166,5 +108,7 @@
     <footer>
         <p>&copy; 2025 Somanath Nayak. All rights reserved.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
